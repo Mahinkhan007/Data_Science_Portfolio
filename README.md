@@ -1,2 +1,2 @@
 # Data_Science_Portfolio
-This is a portfolio I am creating to demonstrate my works done so far and projects-in-progress to highlight my skills in the field of Data Science.
+![Banner](https://github.com/Mahinkhan007/Data_Science_Portfolio/blob/main/Untitled%20design.png)
