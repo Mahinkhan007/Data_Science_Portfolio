@@ -5,7 +5,7 @@
 
 2 CSV files are given.
 
--
+- (https://github.com/Mahinkhan007/Data_Science_Portfolio/blob/main/Retool%20Dashboard%20for%20missing%20encounters/Ops%20Case%20Study%20Dataset%20-%20Sample%20EHR%20Data%20(2).csv)
 -
 
 ---
@@ -46,4 +46,6 @@ Check logs on spike days for system errors.
 -![Banner]()
 -![Banner]()
 
-
+##Deliverables:
+-Retool Dashboard
+-SQL Queries
