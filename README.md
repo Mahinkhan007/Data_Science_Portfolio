@@ -80,8 +80,7 @@ I specialize in:
 ## 📚 Educational Qualifications
 
 - MEngS in Data Science (Currently Pursuing) - Multimedia University, Malaysia
-- BE in Electronics Engineering majoring in Computer (Graduated - 2025) - Multimedia University, Malaysia
-- ![Banner](https://github.com/Mahinkhan007/Data_Science_Portfolio/blob/main/Certificate%20Mahin%20Latest%20.pdf)
+- BE in Electronics Engineering majoring in Computer (Graduated - 2025) - Multimedia University, Malaysia [Certificate](https://github.com/Mahinkhan007/Data_Science_Portfolio/blob/main/Certificate%20Mahin%20Latest%20.pdf)
 
 ---
 
