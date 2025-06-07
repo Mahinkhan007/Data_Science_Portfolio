@@ -1,0 +1,145 @@
+/*query for missing encounters by providers */
+
+SELECT 
+  e.provider_name,
+  COUNT(*) AS count
+FROM 
+  ehr_data e
+LEFT JOIN 
+  sample_db s
+    ON e.patient_name = s.patient_name
+    AND DATE(e.date_of_service) = s.from_date_range
+    AND e.provider_name = s.provider_name
+WHERE 
+  s.patient_name IS NULL
+  AND e.provider_name = COALESCE({{ select1.value }}, e.provider_name)
+GROUP BY 
+  e.provider_name
+ORDER BY 
+  count DESC;
+
+/*query for missing encounters by CPT codes and their counts */
+
+SELECT 
+  CAST(e.cpt_code AS TEXT) AS cpt_code,
+  COUNT(*) AS count
+FROM 
+  ehr_data e
+LEFT JOIN 
+  sample_db s
+  ON e.patient_name = s.patient_name
+     AND DATE(e.date_of_service) = s.from_date_range
+     AND e.provider_name = s.provider_name
+WHERE 
+  s.patient_name IS NULL
+GROUP BY 
+  cpt_code
+ORDER BY 
+  count DESC
+LIMIT 10;
+
+
+/* query for distict provider names that are missing to create filters*/
+
+
+SELECT DISTINCT e.provider_name
+FROM ehr_data e
+LEFT JOIN sample_db s
+  ON e.patient_name = s.patient_name
+  AND DATE(e.date_of_service) = s.from_date_range
+  AND e.provider_name = s.provider_name
+WHERE s.patient_name IS NULL
+ORDER BY e.provider_name;
+
+
+/* Missing encounters by dates */
+
+SELECT 
+  DATE(e.date_of_service) AS date,
+  COUNT(*) AS count
+FROM 
+  ehr_data e
+LEFT JOIN 
+  sample_db s
+    ON e.patient_name = s.patient_name
+    AND DATE(e.date_of_service) = s.from_date_range
+    AND e.provider_name = s.provider_name
+WHERE 
+  s.patient_name IS NULL
+  AND DATE(e.date_of_service) BETWEEN 
+      COALESCE({{ dateRange1.value.start }}::date, '2024-05-01') AND 
+      COALESCE({{ dateRange1.value.end }}::date, '2024-12-31')
+GROUP BY 
+  DATE(e.date_of_service)
+ORDER BY 
+  date;
+
+
+
+/* Comparing cleaned data  */
+
+WITH ehr_cleaned AS (
+  SELECT DISTINCT
+    UPPER(TRIM(patient_name)) AS patient_name,
+    UPPER(TRIM(provider_name)) AS provider_name,
+    DATE(date_of_service) AS date_of_service,
+    cpt_code
+  FROM ehr_data
+  WHERE 
+    patient_name IS NOT NULL AND
+    provider_name IS NOT NULL AND
+    date_of_service IS NOT NULL
+),
+db_cleaned AS (
+  SELECT DISTINCT
+    UPPER(TRIM(patient_name)) AS patient_name,
+    UPPER(TRIM(provider_name)) AS provider_name,
+    from_date_range AS date_of_service,
+    cpt_codes AS cpt_code
+  FROM sample_db
+  WHERE 
+    patient_name IS NOT NULL AND
+    provider_name IS NOT NULL AND
+    from_date_range IS NOT NULL
+)
+
+SELECT 
+  ehr_cleaned.*
+FROM 
+  ehr_cleaned
+LEFT JOIN 
+  db_cleaned
+ON 
+  ehr_cleaned.patient_name = db_cleaned.patient_name AND
+  ehr_cleaned.provider_name = db_cleaned.provider_name AND
+  ehr_cleaned.date_of_service = db_cleaned.date_of_service
+WHERE 
+  db_cleaned.patient_name IS NULL;
+
+
+
+/*
+
+Javascript used for dynamic summary statistics
+
+
+
+const data = {{query_view_com_procedure.data}}; // Update with your actual query name
+
+if (!Array.isArray(data) || data.length === 0) {
+  return '### Summary of Missing Procedure Codes\n\nNo data available.';
+}
+
+const topCPTs = data.slice(0, 3);
+const topCPTList = topCPTs.map(d => d.cpt_code).join(', ');
+const nonStandard = data.find(d => isNaN(parseInt(d.cpt_code)));
+
+return `
+### Summary of Missing Procedure Codes
+
+- **Most frequently missing CPT code:** \`${topCPTs[0].cpt_code}\` (${topCPTs[0].count} times)
+- **Top 3 missing codes:** \`${topCPTList}\`
+${nonStandard ? `- **Non-standard CPT code found:** \`${nonStandard.cpt_code}\` – may indicate custom/internal code` : ''}
+- **Possible issues:** data entry inconsistencies, lack of mapping for certain services
+`;
+*/
