@@ -7,12 +7,12 @@ I'm Mahin, a curious, creative, and coffee-fueled data analyst who loves to turn
 ---
 ## 📚 Table of Contents
 
-- [What do I do](#What-I-Do)
-- [Portfolio Highlights](#Portfolio-Highlights)
-- [Currently Learning](#Currently-Learning)
+- [What I do](#what-i-do)
+- [Portfolio Highlights](#portfolio-highlights)
+- [Currently Learning](#currently-learning)
 - [Certifications Earned](#Certifications-Earned)
-- [Educational Qualifications](#Educational-Qualifications)
-- [Contact](#Let’s-Connect!)
+- [Educational Qualifications](#educational-qualifications)
+- [Contact](#contact)
 
 
 ---
@@ -85,7 +85,7 @@ I specialize in:
 
 ---
 
-## 🎯 Let’s Connect!
+## 🎯 Contact
 
 I'm always open to collaborations, freelance work, or just nerding out about data. Reach out!
 
