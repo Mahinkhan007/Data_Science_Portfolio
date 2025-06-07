@@ -55,6 +55,9 @@ I specialize in:
 
 ## 🔍 Portfolio Highlights
 
+| Project | Description | Tools Used |
+
+|**[Retool Dashboard for missing encounters](https://github.com/Mahinkhan007/Data_Science_Portfolio/tree/main/Retool%20Dashboard%20for%20missing%20encounters)**| Identifying causation and correlation via SQL queries | **Retool**, **SQL**, **Js** |
 
 
 ---
