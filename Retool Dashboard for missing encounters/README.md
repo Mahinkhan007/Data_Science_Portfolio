@@ -1,12 +1,14 @@
 
 ## Retool Dashboard to analyse the cause of the missing encounters while importing Patient information
 
+[Link to Retool Dashboard](https://mahinkhan554.retool.com/editor/72efd3d8-2656-11f0-bf62-037a81b72afa/AugmedixCaseStudy/HOME)
+
 ---
 
 2 CSV files are given.
 
 - [Sample DB data](https://github.com/Mahinkhan007/Data_Science_Portfolio/blob/main/Retool%20Dashboard%20for%20missing%20encounters/Ops%20Case%20Study%20Dataset%20-%20Sample%20EHR%20Data%20(2).csv)
-- [Sample EHR data] (https://github.com/Mahinkhan007/Data_Science_Portfolio/blob/main/Retool%20Dashboard%20for%20missing%20encounters/Ops%20Case%20Study%20Dataset%20-%20Sample%20EHR%20Data%20(2).csv)
+- [Sample EHR data](https://github.com/Mahinkhan007/Data_Science_Portfolio/blob/main/Retool%20Dashboard%20for%20missing%20encounters/Ops%20Case%20Study%20Dataset%20-%20Sample%20EHR%20Data%20(2).csv)
 
 ---
 
@@ -43,9 +45,11 @@ Check logs on spike days for system errors.
 
 ##Snapshots: 
 
--![Banner]()
--![Banner]()
+-![Banner](https://github.com/Mahinkhan007/Data_Science_Portfolio/blob/main/Retool%20Dashboard%20for%20missing%20encounters/ss1.png)
+-![Banner](https://github.com/Mahinkhan007/Data_Science_Portfolio/blob/main/Retool%20Dashboard%20for%20missing%20encounters/ss2.png)
+-![Banner](https://github.com/Mahinkhan007/Data_Science_Portfolio/blob/main/Retool%20Dashboard%20for%20missing%20encounters/ss3.png)
+
 
 ##Deliverables:
--Retool Dashboard
--SQL Queries
+-[Retool Dashboard](https://mahinkhan554.retool.com/editor/72efd3d8-2656-11f0-bf62-037a81b72afa/AugmedixCaseStudy/HOME)
+-[SQL Queries](https://github.com/Mahinkhan007/Data_Science_Portfolio/blob/main/Retool%20Dashboard%20for%20missing%20encounters/sql.text)
