@@ -70,8 +70,9 @@ I specialize in:
 
 ## 📚 Currently Learning
 
-- Advanced SQL 🧩  
-- Power BI Custom Visuals ⚡  
+- Dynamic ETL/ELT methodologies
+- Snowflake
+- Databricks
 - Machine Learning for Data Science 🤖
 - Tensorflow framework
 - PyTorch framework
@@ -80,6 +81,7 @@ I specialize in:
 
 ## 📚 Certifications Earned
 
+- Microsoft Azure DP-900
 - Google Professional Data Analytics (2025) - https://coursera.org/share/0ba949b98c04d3b0f2cdc0ca98b442f5
 - Python for Everybody - University of Michigan (2025) - https://www.coursera.org/account/accomplishments/specialization/P2YDFB2ZMUCM
 - IELTS Certification - Band Score - 8.0 (December, 2024 - December, 2026)
