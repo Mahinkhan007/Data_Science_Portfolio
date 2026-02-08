@@ -2,6 +2,9 @@
 
 End-to-End Analytics, BI & Machine Learning Project
 
+![Dashboard Overview](./PowerBI/final_output_page_1.png) 
+
+
 🔗 Live Dashboard
 
 [View Live Power BI Dashboard](https://app.powerbi.com/view?r=YOUR_LINK)
