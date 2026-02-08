@@ -66,6 +66,9 @@ I specialize in:
 | **[NutriScanner](https://github.com/Mahinkhan007/NutriScanner)** | A smart mobile app that scans gym food barcodes and uses AI to analyze nutritional info, safe dosages, pros & cons, and recommend similar products based on user profile (BMR, body type). Integrates computer vision, NLP, and recommendation systems. | **Flutter**, **Dart**, **Firebase**, **OpenAI (NLP)**, **OpenFoodFacts API**, **Firestore**, **BMR Calculation**, **AI Chatbot**, **Android Studio** |
 ----
 
+| **[Customer Churn Analysis & Prediction](https://github.com/Mahinkhan007/Data_Science_Portfolio/tree/main/Churn_Analyses||Machine_Learning)** | End-to-end churn analytics project built on the Microsoft data stack, combining cloud data engineering, business intelligence, and machine learning to analyze historical churn and predict future high-risk customers using interactive dashboards. | **Azure SQL Database**, **Power BI Service (Web)**, **Power BI Semantic Modeling**, **DAX**, **Python**, **pandas**, **scikit-learn**, **Machine Learning**, **Churn Prediction**, **Data Analytics** |
+
+
 ---
 
 ## 📚 Currently Learning
