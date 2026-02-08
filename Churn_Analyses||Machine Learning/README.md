@@ -4,7 +4,7 @@ End-to-End Analytics, BI & Machine Learning Project
 
 🔗 Live Dashboard
 
-👉 View Power BI Report
+[View Live Power BI Dashboard](https://app.powerbi.com/view?r=YOUR_LINK)
 
 📌 Project Overview
 
